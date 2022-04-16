@@ -1,8 +1,9 @@
 class Game():
-    def __init__(self, input_game_name):
-        self.game_name = input_game_name
+
+    def __init__(self):
+        pass
     
-    def game(player1, player2):
+    def play_game(self, player1, player2):
         
         # ***** Game rules *****
 
