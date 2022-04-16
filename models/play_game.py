@@ -1,12 +1,11 @@
-from models.game import Game
-from models.player import Player
+# from models.game import Game
+# from models.player import Player
 
-player1 = Player("Tom", "paper")
-player2 = Player("Jerry", "rock")
+# player1 = Player("Tom", "paper")
+# player2 = Player("Jerry", "rock")
 
-choice1 = player1.get_choice()
-choice2 = player2.get_choice()
+# choice1 = player1.get_choice()
+# choice2 = player2.get_choice()
 
-game = Game()
+# game = Game()
 
-results = game.play_game(player1,player2)

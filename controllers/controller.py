@@ -2,7 +2,7 @@ from flask import render_template
 from app import app
 from models.player import Player
 from models.game import Game
-from models.play_game import *
+# from models.play_game import *
 
 @app.route('/')
 def home():
@@ -10,4 +10,8 @@ def home():
 
 @app.route('/<choice1>/<choice2>')
 def game_result(choice1, choice2):
+    player1 = Player(choice1)
+    player2 = Player(choice2)
+    game = Game()
+    results = game.play_game(player1,player2)
     return render_template("index.html", title = "Game results", game_results = results, choice = choice1)
