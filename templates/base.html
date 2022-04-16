@@ -15,6 +15,7 @@
     </head>
     <body>
         <a href = "{{ url_for('welcome', filename='welcome.html') }}"> Click to check how to play</a>
+        <a href = "{{ url_for('play', filename='index.html') }}"> Click to play</a>
 
         {% block content %}{% endblock%}
     </body>

@@ -1,7 +1,16 @@
+from models.player import Player
+import random
+
 class Game():
 
     def __init__(self):
-        pass
+        computer_choice = None
+    
+    def get_computer_choice(self):
+        return self.computer_choice
+    
+    def set_computer_choice(self, computer_choice):
+        self.computer_choice = computer_choice
     
     def play_game(self, player1, player2):
         
@@ -19,3 +28,9 @@ class Game():
         
         else:
             return False
+    
+    def play_with_computer(self, human_player):
+        choices = ["paper","rock","scissors"]
+        computer = Player("computer",random.choice(choices))
+        self.set_computer_choice(computer.choice)
+        return self.play_game(human_player, computer)

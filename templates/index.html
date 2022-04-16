@@ -3,13 +3,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Hi Player 1!</p>
-    {% if game_results %}
+    <p>Hi {{ name }}</p>
+    {% if game_results == True %}
         <p>You win!!! :)</p>
     {% elif game_results == None %}
         <p>It's a draw!</p>
     {% else %}
-        <p>Your lose... :(</p>
+        <p>You lose... :(</p>
     {% endif %}
     <p> Your choice was: {{ choice }}</p>
 {% endblock %}
