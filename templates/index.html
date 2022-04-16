@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" href=""> -->
-    </head>
-    <body>
-        <p>Hi Player 1!</p>
-        {% if game_results %}
-            <p>You win!!! :)</p>
-        {% elif game_results == None %}
-            <p>It's a draw!</p>
-        {% else %}
-            <p>Your lose... :(</p>
-        {% endif %}
-        <p> Your choice was: {{ choice }}</p>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Hi Player 1!</p>
+    {% if game_results %}
+        <p>You win!!! :)</p>
+    {% elif game_results == None %}
+        <p>It's a draw!</p>
+    {% else %}
+        <p>Your lose... :(</p>
+    {% endif %}
+    <p> Your choice was: {{ choice }}</p>
+{% endblock %}
