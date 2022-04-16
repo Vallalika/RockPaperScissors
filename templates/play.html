@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2> Play game </h2>
+    <form action="/tasks" method="post">
+        <input type="text" name="choice" id="choice" value="Type Rock, Paper or Scissors!" size = "30" maxlength = "10"> 
+        <input type="submit" value="Play Game">
+    </form>
+
+{% endblock %}
