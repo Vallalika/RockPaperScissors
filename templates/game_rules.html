@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> How to play </h2>
+<p> Choose "Rock", "Paper" or "Scissors" to start the round. Your opponent will do the same. </p>
+<p> Who wins depends on your choice! </p>
+<ul class="game-rules-ul">
+    <li class="game-rules-li"> "Paper" covers "Rock" </li>
+    <li> "Rock" crushes "Scissors" </li>
+    <li> "Scissors" cuts "Paper" </li>
+</ul>
+<ul class="nav-ul">
+    <li class = "nav-li">
+        <a href = "{{ url_for('play', filename='index.html') }}"> Play</a>
+    </li>
+</ul>
+{% endblock %}

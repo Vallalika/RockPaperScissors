@@ -3,17 +3,18 @@
 {% block content %}
 
 <h2> Play game </h2>
-
-    <form action="{{ url_for('game_result', filename='index.html') }}" method="post">
-        <input type="text" name="player_name" id="player_name" placeholder="Type your name"  maxlength = "30">
-        <br>
-        <br>
-        <select name="player_choice" id="player_choice"  placeholder="Choose Rock, Paper or Scissors!">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
-        <input type="submit" value="Play Game">
-    </form>
-
+    <div>
+        <form action="{{ url_for('game_result', filename='index.html') }}" method="post">
+            <input type="text" name="player_name" id="player_name" placeholder="Type your name" maxlength = "30">
+            <br>
+            <br>
+            <select name="player_choice" id="player_choice"  placeholder="Choose Rock, Paper or Scissors!">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+            <br>
+            <input type="submit" value="Play Game">
+        </form>
+    </div>
 {% endblock %}

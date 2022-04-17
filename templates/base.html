@@ -14,9 +14,16 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
     </head>
     <body>
-        <a href = "{{ url_for('welcome', filename='welcome.html') }}"> Click to check how to play</a>
-        <a href = "{{ url_for('play', filename='index.html') }}"> Click to play</a>
-
+        <header>
+            <h1> Rock-Paper-Scissors </h1>
+            <img src="../static/img/logo.png" alt="cute drawing of rock, paper and scissors characters">
+        </header>
+        <hr>
+        <main>
         {% block content %}{% endblock%}
+        </main>
+        <footer>    
+            <a id="footer-link" href="https://www.vecteezy.com/free-vector/rock-paper-scissors" target="_blank">Image credits</a>
+        </footer>
     </body>
 </html>

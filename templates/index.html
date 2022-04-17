@@ -12,4 +12,8 @@
         <p>You lose... :(</p>
     {% endif %}
     <p> Your choice was: {{ choice }}</p>
+    <br>
+    <form action="{{ url_for('play', filename='play.html') }}">
+        <input type="submit" value="Replay?" />
+    </form>
 {% endblock %}

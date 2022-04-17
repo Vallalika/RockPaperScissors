@@ -11,6 +11,10 @@ def home():
 def welcome():
     return render_template("welcome.html", title = "Rock-Paper-Scissors")
 
+@app.route('/game_rules')
+def game_rules():
+    return render_template("game_rules.html", title = "Rock-Paper-Scissors")
+
 @app.route('/play')
 def play():
     return render_template("play.html", title = "Rock-Paper-Scissors")
