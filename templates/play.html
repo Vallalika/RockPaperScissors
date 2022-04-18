@@ -14,7 +14,12 @@
                 <option value="scissors">Scissors</option>
             </select>
             <br>
+            <br>
             <input type="submit" value="Play Game">
+            <br>
         </form>
+    </div>
+    <div>
+        <a id="game-rules-in-play-page" href="{{ url_for('game_rules', filename='game_rules.html') }}"> How to play</a>
     </div>
 {% endblock %}

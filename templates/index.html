@@ -3,17 +3,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Hi {{ name }}</p>
-    {% if game_results == True %}
-        <p>You win!!! :)</p>
-    {% elif game_results == None %}
-        <p>It's a draw!</p>
-    {% else %}
-        <p>You lose... :(</p>
-    {% endif %}
-    <p> Your choice was: {{ choice }}</p>
-    <br>
-    <form action="{{ url_for('play', filename='play.html') }}">
-        <input type="submit" value="Replay?" />
-    </form>
+    <div id="div-game-result">
+        <p>Hey {{ name }}</p>
+        {% if game_results == True %}
+            <p> <b> You WIN</b>!!! :) </b></p>
+        {% elif game_results == None %}
+            <p> <b> It's a draw! </b> </p>
+        {% else %}
+            <p> <b> You lose... :( </b> </p>
+        {% endif %}
+        <p> Your choice was: <b>{{ choice }}</b></p>
+        <a class = "nav-li" href = "{{ url_for('play', filename='play.html') }}"> Replay? </a>  
+    </div>
+    
 {% endblock %}
